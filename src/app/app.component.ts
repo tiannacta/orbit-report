@@ -22,7 +22,7 @@ export class AppComponent {
           let satelliteNew;
          
             for(let i = 0; i < fetchedSatellites.length; i++){
-              satelliteNew = new Satellite(fetchedSatellites[i].name, fetchedSatellites[i].type, fetchedSatellites[i].launchDate, fetchedSatellites[i].orbitType, fetchedSatellites[i].operational);
+              satelliteNew = new Satellite({ name: fetchedSatellites[i].name, type: fetchedSatellites[i].type, launchDate: fetchedSatellites[i].launchDate, orbitType: fetchedSatellites[i].orbitType, operational: fetchedSatellites[i].operational });
               this.sourceList.push(satelliteNew);
             }
             this.displayList = this.sourceList.slice(0);
